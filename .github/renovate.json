@@ -3,7 +3,7 @@
   "extends": ["config:recommended"],
   "branchPrefix": "renovate/",
   "baseBranches": ["main", "test-1"],
-  "enabledManagers": ["dockerfile", "tekton"],
+  "enabledManagers": ["dockerfile", "tekton", "rpm"],
   "packageRules": [
     {
       "matchManagers": ["dockerfile"],
