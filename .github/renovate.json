@@ -2,6 +2,9 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:recommended"],
   "branchPrefix": "renovate/",
+  "ignoreTests": true,
+  "automergeType": "pr",
+  "automerge": true,
   "baseBranches": ["main", "test-1"],
   "enabledManagers": ["dockerfile", "tekton", "rpm"],
   "packageRules": [
@@ -99,6 +102,21 @@
           "/^quay.io/redhat-appstudio-tekton-catalog//",
           "/^quay.io/konflux-ci/tekton-catalog//"
         ]
+      }
+    ]
+  },
+  "rpm": {
+    "enabled": true,
+    "packageRules": [
+      {
+        "groupName": "RPM Updates",
+        "matchBaseBranches": ["main"],
+        "commitMessageTopic": "RPM updates",
+        "matchManagers": ["rpm"],
+        "enabled": true,
+        "schedule": ["at any time"],
+        "branchPrefix": "renovate/rpm/",
+        "semanticCommits": "enabled"
       }
     ]
   },
