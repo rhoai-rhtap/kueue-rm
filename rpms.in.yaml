@@ -3,5 +3,8 @@ contentOrigin:
     - ubi.repo
 packages:
   - gcc
-  - make
-  - openssl-devel
+  - gcc-c++
+  - python38
+  - python38-devel
+  - nodejs
+  - glibc-minimal-langpack
