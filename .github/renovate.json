@@ -117,8 +117,7 @@
       ]
     },
     "rpm": {
-    "enabled": true,
-    "baseBranches": ["main"],     
+    "enabled": true,    
     "schedule": ["at any time"]
     },
     "prHourlyLimit": 0
