@@ -10,7 +10,7 @@
     "packageRules": [
       {
         "matchManagers": ["dockerfile"],
-        "matchBaseBranches": ["main"],
+        "matchBaseBranches": ["main", "test-2"],
         "matchUpdateTypes": ["digest"],
         "matchFileNames": ["*Dockerfile.konflux*"],
         "enabled": true,
@@ -23,7 +23,7 @@
       },
       {
         "matchManagers": ["dockerfile"],
-        "matchBaseBranches": ["test-1", "test-2"],
+        "matchBaseBranches": ["test-2"],
         "enabled": false
       },
       {
@@ -42,7 +42,7 @@
       },
       {
         "matchManagers": ["rpm"],
-        "matchBaseBranches": ["main"],
+        "matchBaseBranches": ["main", "test-2"],
         "groupName": "RPM Updates",
         "commitMessageTopic": "RPM updates",
         "enabled": true,
